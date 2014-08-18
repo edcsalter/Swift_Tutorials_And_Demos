@@ -15,19 +15,19 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
     var dynamicBehavior: UICollisionBehavior!
     var square: UIView!
     var snap: UISnapBehavior!
-    var initialHit = false
-    
+    var firstContact = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let pushVector = CGVectorMake(10, 20)
 
         square = UIView(frame: CGRect(x: 100, y: 0, width: 100, height: 100))
         square.backgroundColor = UIColor.greenColor()
         view.addSubview(self.square)
         
-        let barrierFloor = UIView(frame: CGRectMake( 100, 100, 100, 100))
+      
+        let barrierFloor = UIView(frame: CGRectMake( 0, 560, 320, 20))
         barrierFloor.backgroundColor = UIColor.blackColor()
-        //  view.addSubview(barrierFloor)
+        view.addSubview(barrierFloor)
         
         let bumperLeft = UIView(frame: CGRectMake(0, 300, 125, 25))
         bumperLeft.backgroundColor = UIColor.orangeColor()
@@ -41,15 +41,11 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
         rightMidBumper.backgroundColor = UIColor.orangeColor()
         view.addSubview(rightMidBumper)
 
-       
         animator = UIDynamicAnimator(referenceView: self.view)
         gravity = UIGravityBehavior(items: [self.square])
 
         dynamicBehavior = UICollisionBehavior(items: [self.square])
         dynamicBehavior.collisionDelegate = self
-
-      //  dynamicBehavior.addBoundaryWithIdentifier("left", forPath: UIBezierPath(rect: CGRectMake(0, 0, 10, 580)))
-       // dynamicBehavior.addBoundaryWithIdentifier("left", forPath: UIBezierPath(rect: CGRectMake(310, 0, 10, 580)))
         dynamicBehavior.addBoundaryWithIdentifier("bumperLeft", forPath: UIBezierPath(rect: bumperLeft.frame))
         dynamicBehavior.addBoundaryWithIdentifier("leftMidBumper", forPath: UIBezierPath(rect: leftMidBumper.frame))
         dynamicBehavior.addBoundaryWithIdentifier("rightMidBumper", forPath: UIBezierPath(rect: rightMidBumper.frame))
@@ -58,7 +54,6 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
         
         animator.addBehavior(dynamicBehavior)
         animator.addBehavior(gravity)
-    
         
         var updateCount = 0
         dynamicBehavior.action = {
@@ -71,10 +66,8 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
                 outline.layer.borderColor = self.square.layer.presentationLayer().backgroundColor
                 outline.layer.borderWidth = 1.0
                 outline.layer.cornerRadius = 5
-                ++outline.layer.cornerRadius
                 self.view.addSubview(outline)
             }
-            
             ++updateCount
         }
         let objectBehavior = UIDynamicItemBehavior(items: [self.square])
@@ -84,33 +77,30 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func collisionBehavior(behavior: UICollisionBehavior!, beganContactForItem item: UIDynamicItem!, withBoundaryIdentifier identifier: NSCopying!, atPoint p: CGPoint) {
         println("We've been hit at \(identifier)")
         let collisionView = item as UIView
         collisionView.backgroundColor = UIColor.greenColor()
+        
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             collisionView.backgroundColor = UIColor.redColor()
         })
-//        if (!initialHit) {
-//            initialHit = true
-//            
-//            let square = UIView(frame: CGRect(x: 150, y: 0, width: 100, height: 100))
-//            square.backgroundColor = UIColor.blueColor()
-//            view.addSubview(square)
-//            
-//            dynamicBehavior.addItem(square)
-//            
-//            gravity.addItem(square)
-//            
-//            let attach = UIAttachmentBehavior(item: square, attachedToItem:self.square)
-//            animator.addBehavior(attach)
-//        }
-
+        if (!firstContact) {
+            firstContact = true
+            
+            let square = UIView(frame: CGRect(x: 30, y: 0, width: 100, height: 100))
+            square.backgroundColor = UIColor.greenColor()
+            view.addSubview(square)
+            
+            dynamicBehavior.addItem(square)
+            gravity.addItem(square)
+            
+            let attach = UIAttachmentBehavior(item: collisionView, attachedToItem:square)
+            animator.addBehavior(attach)
+        }
     }
-    
 }
 
 
