@@ -8,13 +8,14 @@
 
 import UIKit
 import CoreGraphics
-
+import QuartzCore
 class ViewController: UIViewController, UICollisionBehaviorDelegate {
     var animator: UIDynamicAnimator!
     var gravity: UIGravityBehavior!
     var dynamicBehavior: UICollisionBehavior!
+    var snapToTouch: UISnapBehavior!
     var square: UIView!
-    var snap: UISnapBehavior!
+    var touch: UITouch!
     var firstContact = false
 
     override func viewDidLoad() {
@@ -73,6 +74,7 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
         let objectBehavior = UIDynamicItemBehavior(items: [self.square])
         objectBehavior.elasticity = 0.8
         animator.addBehavior(objectBehavior)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,12 +83,14 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
     
     func collisionBehavior(behavior: UICollisionBehavior!, beganContactForItem item: UIDynamicItem!, withBoundaryIdentifier identifier: NSCopying!, atPoint p: CGPoint) {
         println("We've been hit at \(identifier)")
+        
         let collisionView = item as UIView
         collisionView.backgroundColor = UIColor.greenColor()
         
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             collisionView.backgroundColor = UIColor.redColor()
         })
+        
         if (!firstContact) {
             firstContact = true
             
@@ -100,6 +104,27 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
             let attach = UIAttachmentBehavior(item: collisionView, attachedToItem:square)
             animator.addBehavior(attach)
         }
+    }
+    
+     override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
+        if ((snapToTouch) != nil) {
+            animator.removeBehavior(snapToTouch)
+
+        }
+        touch = touches.anyObject() as UITouch
+        snapToTouch = UISnapBehavior(item: square, snapToPoint: touch.locationInView(view))
+
+        animator.addBehavior(snapToTouch)
+        self.view.setNeedsDisplay()
+}
+    
+    override func touchesEnded(touches: NSSet!, withEvent event: UIEvent!) {
+    if (snapToTouch != nil) {
+        animator.removeBehavior(snapToTouch)
+    }
+    gravity = UIGravityBehavior(items: [square, self.square])
+    animator.addBehavior(gravity)
+    self.view.setNeedsDisplay()
     }
 }
 
