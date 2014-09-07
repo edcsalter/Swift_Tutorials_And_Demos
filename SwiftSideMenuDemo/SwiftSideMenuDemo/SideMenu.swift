@@ -17,10 +17,11 @@ import UIKit
 
 class SideMenu : NSObject, TableVCDelegate {
     
-    let menuWidth : CGFloat = 260.0
-    let menuTableViewTopInset : CGFloat = 64.0 // if you use translusent navigation bar
-    let sideMenuContainerView =  UIView()
-    let sideMenuTableViewController = TableVC()
+    let menuWidth : CGFloat = 220.0
+    let menuTVInsetTop : CGFloat = 84.0
+    let menuTVInsetLeft : CGFloat = 0.0
+    let menuContView =  UIView()
+    let menuTVC = TableVC()
     var animator : UIDynamicAnimator!
     let sourceView : UIView!
     var delegate : SideMenuDelegate?
@@ -29,7 +30,7 @@ class SideMenu : NSObject, TableVCDelegate {
     init(sourceView: UIView, menuData:Array<String>) {
         super.init()
         self.sourceView = sourceView
-        self.sideMenuTableViewController.tableData = menuData
+        self.menuTVC.tableData = menuData
         
         self.setupMenuView()
         
@@ -42,41 +43,40 @@ class SideMenu : NSObject, TableVCDelegate {
         // Add hide gesture recognizer
         var hideGestureRecognizer = UISwipeGestureRecognizer(target: self, action: Selector("handleGesture:"))
         hideGestureRecognizer.direction = UISwipeGestureRecognizerDirection.Left
-        sideMenuContainerView.addGestureRecognizer(hideGestureRecognizer)
+        menuContView.addGestureRecognizer(hideGestureRecognizer)
     }
     
     
     func setupMenuView() {
         
         // Configure side menu container
-        sideMenuContainerView.frame = CGRectMake(-menuWidth-1.0, sourceView.frame.origin.y, menuWidth, sourceView.frame.size.height)
-        sideMenuContainerView.backgroundColor = UIColor.clearColor()
-        sideMenuContainerView.clipsToBounds = false
-        sideMenuContainerView.layer.masksToBounds = false;
-        sideMenuContainerView.layer.shadowOffset = CGSizeMake(1.0, 1.0);
-        sideMenuContainerView.layer.shadowRadius = 1.0;
-        sideMenuContainerView.layer.shadowOpacity = 0.125;
-        sideMenuContainerView.layer.shadowPath = UIBezierPath(rect: sideMenuContainerView.bounds).CGPath
+        menuContView.frame = CGRectMake(-menuWidth-1.0, sourceView.frame.origin.y, menuWidth, sourceView.frame.size.height)
+        menuContView.backgroundColor = UIColor.clearColor()
+        menuContView.clipsToBounds = true
+        menuContView.layer.masksToBounds = false;
+        menuContView.layer.shadowOffset = CGSizeMake(1.0, 1.0);
+        menuContView.layer.shadowRadius = 1.0;
+        menuContView.layer.shadowOpacity = 0.125;
+        menuContView.layer.shadowPath = UIBezierPath(rect: menuContView.bounds).CGPath
         
-        sourceView.addSubview(sideMenuContainerView)
+        sourceView.addSubview(menuContView)
         
         // Add blur view
         var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
-        visualEffectView.frame = sideMenuContainerView.bounds
-        sideMenuContainerView.addSubview(visualEffectView)
+        visualEffectView.frame = menuContView.bounds
+        menuContView.addSubview(visualEffectView)
         
         // Configure side menu table view
-        sideMenuTableViewController.delegate = self
-        sideMenuTableViewController.tableView.frame = sideMenuContainerView.bounds
-        sideMenuTableViewController.tableView.clipsToBounds = false
-        sideMenuTableViewController.tableView.separatorStyle = .None
-        sideMenuTableViewController.tableView.backgroundColor = UIColor.clearColor()
-        sideMenuTableViewController.tableView.scrollsToTop = false
-        sideMenuTableViewController.tableView.contentInset = UIEdgeInsetsMake(menuTableViewTopInset, 0, 0, 0)
+        menuTVC.delegate = self
+        menuTVC.tableView.frame = menuContView.bounds
+        menuTVC.tableView.clipsToBounds = false
+        menuTVC.tableView.separatorStyle = .None
+        menuTVC.tableView.backgroundColor = UIColor.clearColor()
+        menuTVC.tableView.scrollsToTop = false
+        menuTVC.tableView.contentInset = UIEdgeInsetsMake(menuTVInsetTop, menuTVInsetLeft, 0, 0)
         
-        sideMenuTableViewController.tableView.reloadData()
-        
-        sideMenuContainerView.addSubview(sideMenuTableViewController.tableView)
+        menuTVC.tableView.reloadData()
+        menuContView.addSubview(menuTVC.tableView)
     }
     
     func handleGesture(gesture: UISwipeGestureRecognizer) {
@@ -95,31 +95,29 @@ class SideMenu : NSObject, TableVCDelegate {
         animator.removeAllBehaviors()
         isMenuOpen = shouldOpen
         let gravityDirectionX: CGFloat = (shouldOpen) ? 0.5 : -0.5;
-        let pushMagnitude: CGFloat = (shouldOpen) ? 20.0 : -20.0;
+        let pushMagnitude: CGFloat = (shouldOpen) ? 80.0 : -80.0;
         let boundaryPointX: CGFloat = (shouldOpen) ? menuWidth : -menuWidth-1.0;
         
-        let gravityBehavior = UIGravityBehavior(items: [sideMenuContainerView])
+        let gravityBehavior = UIGravityBehavior(items: [menuContView])
         gravityBehavior.gravityDirection = CGVectorMake(gravityDirectionX, 0.0)
         animator.addBehavior(gravityBehavior)
         
-        let collisionBehavior = UICollisionBehavior(items: [sideMenuContainerView])
+        let collisionBehavior = UICollisionBehavior(items: [menuContView])
         collisionBehavior.addBoundaryWithIdentifier("menuBoundary", fromPoint: CGPointMake(boundaryPointX, 20.0),
             toPoint: CGPointMake(boundaryPointX, sourceView.frame.size.height))
         animator.addBehavior(collisionBehavior)
         
-        let pushBehavior = UIPushBehavior(items: [sideMenuContainerView], mode: UIPushBehaviorMode.Instantaneous)
+        let pushBehavior = UIPushBehavior(items: [menuContView], mode: UIPushBehaviorMode.Instantaneous)
         pushBehavior.magnitude = pushMagnitude
         animator.addBehavior(pushBehavior)
         
-        let menuViewBehavior = UIDynamicItemBehavior(items: [sideMenuContainerView])
-        menuViewBehavior.elasticity = 0.3
+        let menuViewBehavior = UIDynamicItemBehavior(items: [menuContView])
+        menuViewBehavior.elasticity = 0.2
         animator.addBehavior(menuViewBehavior)
     }
-    
     func menuControllerDidSelectRow(indexPath:NSIndexPath) {
         delegate?.sideMenuDidSelectItemAtIndex(indexPath.row)
     }
-    
     func toggleMenu () {
         if (isMenuOpen) {
             toggleMenu(false)

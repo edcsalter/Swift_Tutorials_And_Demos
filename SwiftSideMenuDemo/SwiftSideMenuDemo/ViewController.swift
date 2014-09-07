@@ -19,10 +19,11 @@ class ViewController: UIViewController, SideMenuDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         sideMenu = SideMenu(sourceView: self.view, menuData: ["Always", "Endeavor", "to be", "EPIC!!!"])
         sideMenu!.delegate = self
-        self.navigationController!.navigationBar.backgroundColor = UIColor.clearColor()
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
         var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
         visualEffectView.frame = self.navigationController!.navigationBar.frame
-        self.navigationController!.navigationBar.addSubview(visualEffectView)
+        self.navigationController?.view.addSubview(visualEffectView)
+        self.prefersStatusBarHidden()
     }
     
     override func didReceiveMemoryWarning() {

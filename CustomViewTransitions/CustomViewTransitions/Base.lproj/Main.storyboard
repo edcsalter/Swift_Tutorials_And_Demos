@@ -51,17 +51,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ic0-Ol-bSF">
-                                <rect key="frame" x="36" y="550" width="528" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ic0-Ol-bSF">
+                                <rect key="frame" x="36" y="544" width="528" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="HIDE">
-                                    <color key="titleColor" red="0.022955647789697275" green="1" blue="0.046117532971766351" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.52097270864610135" green="0.50904166875249168" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="Uzt-i7-DK9" kind="unwind" unwindAction="unwindToViewController:" id="zkT-Kk-We9"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.47164437340356891" green="0.92370975378787878" blue="0.40009614767152452" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="ic0-Ol-bSF" secondAttribute="trailing" constant="20" id="ILc-rp-i1R"/>
                             <constraint firstItem="lKr-Bg-bug" firstAttribute="top" secondItem="ic0-Ol-bSF" secondAttribute="bottom" constant="20" id="S7c-39-ZfJ"/>
