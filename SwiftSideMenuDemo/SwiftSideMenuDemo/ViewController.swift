@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ViewController: UIViewController, SideMenuDelegate {
+class ViewController: UIViewController, SideMenuDelegate, UIGestureRecognizerDelegate {
     
     var sideMenu : SideMenu?
     let imageView = UIImageView(image: UIImage(named: "background"))
@@ -16,27 +16,46 @@ class ViewController: UIViewController, SideMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(imageView)
-        // Do any additional setup after loading the view, typically from a nib.
         sideMenu = SideMenu(sourceView: self.view, menuData: ["Always", "Endeavor", "to be", "EPIC!!!"])
         sideMenu!.delegate = self
+        self.navigationController?.navigationBarHidden = true
         self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
-        var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
-        visualEffectView.frame = self.navigationController!.navigationBar.frame
-        self.navigationController?.view.addSubview(visualEffectView)
         self.prefersStatusBarHidden()
+        self.setupNavBar()
+    }
+    
+    func setupNavBar() {
+        let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
+        visualEffectView.frame = CGRectMake(0, 0, self.view.frame.size.width, 44)
+        visualEffectView.setNeedsUpdateConstraints()
+        self.view.addSubview(visualEffectView)
+        let button = self.buildButton()
+        self.view.addSubview(button)
+    }
+    
+    func buildButton() -> UIButton {
+        let menuButton = UIButton(frame: CGRectMake(10, 2, 40, 40))
+        let image = UIImage(named: "lines")
+        menuButton.setImage(image, forState: UIControlState.Normal)
+        menuButton.setImage(image, forState: UIControlState.Highlighted)
+        menuButton.addTarget(self, action: "toggleSideMenu:", forControlEvents: .TouchUpInside)
+        return menuButton
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func sideMenuDidSelectItemAtIndex(index: Int) {
         sideMenu?.toggleMenu()
     }
     
-//    func toggleSideMenu(sender: AnyObject) {
-//        sideMenu?.toggleMenu()
-//    }
-   }
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
+    func toggleSideMenu(sender: AnyObject) {
+        sideMenu?.toggleMenu()
+    }
+}
 
