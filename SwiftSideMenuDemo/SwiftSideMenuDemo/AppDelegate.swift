@@ -19,9 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var navCon = UINavigationController(rootViewController: rootVC)
         navCon.navigationBar.backgroundColor = UIColor.clearColor()
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window!.rootViewController = navCon
         self.window?.backgroundColor = UIColor.greenColor()
         self.window?.makeKeyAndVisible()
-        self.window!.rootViewController = navCon
         navCon.navigationBar.backgroundColor = UIColor.clearColor()
         self.prepareForInterfaceBuilder()
         return true
