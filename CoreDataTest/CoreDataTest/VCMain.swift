@@ -50,7 +50,7 @@ class VCMain: UIViewController {
         //Double checking that the entered Username actually has corresponding stored password
         
         //prevents return of reference to nonexistent object crashing app
-        var results:NSArray = contextReference.executeFetchRequest(request, error: nil)
+        var results:NSArray = contextReference.executeFetchRequest(request, error: nil)!
         
         if results.count > 0 {
             var res = results[0] as NSManagedObject
