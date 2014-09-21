@@ -43,24 +43,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
-    // MARK: - Core Data stack
-
+    // MARK: - CORE DATA STACK
+    
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.edsalter.CoreDataTest" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
         return urls[urls.count-1] as NSURL
     }()
 
-    lazy var managedObjectModel: NSManagedObjectModel = {
-        // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
+    lazy var managedObjectModel: NSManagedObjectModel? = {
+        // The managed object model for the application. 
+        // NOT OPTIONAL! - is fatal error if app not able to locate & load this model
         let modelURL = NSBundle.mainBundle().URLForResource("CoreDataTest", withExtension: "momd")
-        return NSManagedObjectModel(contentsOfURL: modelURL!)
+        return NSManagedObjectModel(contentsOfURL: modelURL!)?
         }()
 
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
         // The persistent store coordinator for the application. This implementation creates and return a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
-        var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
+        var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel!)
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("CoreDataTest.sqlite")
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
@@ -71,7 +72,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
             dict[NSLocalizedFailureReasonErrorKey] = failureReason
             dict[NSUnderlyingErrorKey] = error
-            error = NSError.errorWithDomain("YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
+            
+            //    error = NSError.errorWithDomain("YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
             // Replace this with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog("Unresolved error \(error), \(error!.userInfo)")
@@ -92,7 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return managedObjectContext
     }()
 
-    // MARK: - Core Data Saving support
+    // MARK: - CD SAVING SUPPORT
 
     func saveContext () {
         if let moc = self.managedObjectContext {
