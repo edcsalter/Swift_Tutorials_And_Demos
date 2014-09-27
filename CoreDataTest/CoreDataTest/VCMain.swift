@@ -18,8 +18,8 @@ class VCMain: UIViewController {
         //  println("Save Button Pressed \(txtUsername.text)")
         
         var appDelegateReference: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
-        //adding "as AppDelegate" points the ".delegate", which is just
-        // a general delegate back to our specific app's AppDelegate
+        /*adding "as AppDelegate" points the ".delegate", which is just
+         a general delegate back to specific app's AppDelegate */
         var contextReference:NSManagedObjectContext = appDelegateReference.managedObjectContext!
         //Xcode won't accept anything other than existence (hence the exclamation point) of ".managedObjectedContext"
         
@@ -58,7 +58,7 @@ class VCMain: UIViewController {
             txtPassword.text = res.valueForKey("password") as String
           //  for returnedResults in results {
           //      println(returnedResults)
-      //      }
+          //  }
 
         } else {
             println("0 Results Returned Potential Error")
