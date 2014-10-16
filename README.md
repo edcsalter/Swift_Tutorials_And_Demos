@@ -15,7 +15,12 @@
 <h3 style="font-family:Exo-Thin">CoreDataTest</h3>
 <p style="font-family:Exo-Bold">Username & Password storage and retrieval</p>
 * <div style="font-family:Exo">Placeholder</div>
-<style="font-family:Exo-Thin"></style>
+
+<h2 style="font-family:Exo-Thin">Coming Tonight:<h2>
+
+* <div><strong>MapKit and Core Location Examples</strong></div>
+* <div><strong>Audio Metering and examples with the epic [Superpowered](http://superpowered.com/)</a> audio SDK</strong></div></style>
+
 <style="font-family:Exo-Thin"></style>
 <style="font-family:Exo-Thin"></style>
 <style="font-family:Exo-Thin"></style>
