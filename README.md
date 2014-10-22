@@ -16,10 +16,11 @@
 <p style="font-family:Exo-Bold">Username & Password storage and retrieval</p>
 * <div style="font-family:Exo">Placeholder</div>
 
-<h2 style="font-family:Exo-Thin">Coming Tonight:<h2>
+<h2 style="font-family:Exo-Thin">Coming Tonight (EST): Oct. 22nd 2014<h2>
 
 * <div><strong>MapKit and Core Location Examples</strong></div>
-* <div><strong>Audio Metering and examples with the epic [Superpowered](http://superpowered.com/)</a> audio SDK</strong></div></style>
+* <div><strong>Audio metering and imaging using [EZAudio](https://github.com/MadArkitekt/EZAudio)  
+* <div><strong>Understanding audio filters via the [Superpowered Audio SDK](http://superpowered.com/)</a> is coming soon as a [techEd](http://edsaltertech.com) blog post</strong></div></style>
 
 <style="font-family:Exo-Thin"></style>
 <style="font-family:Exo-Thin"></style>
