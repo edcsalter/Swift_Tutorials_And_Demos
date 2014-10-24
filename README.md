@@ -14,14 +14,18 @@
 <hr>
 <h3 style="font-family:Exo-Thin">CoreDataTest</h3>
 <p style="font-family:Exo-Bold">Username & Password storage and retrieval</p>
-* <div style="font-family:Exo">Placeholder</div>
+* <div style="font-family:Exo"></div>
+<div style="font-family:Exo-Thin">
+<h2>Coming Oct. 24nd 2014<h2>
 
-<h2 style="font-family:Exo-Thin">Coming Tonight (EST): Oct. 22nd 2014<h2>
+* <strong>MapKit and Core Location Examples</strong>
 
-* <div><strong>MapKit and Core Location Examples</strong></div>
-* <div><strong>Audio metering and imaging using [EZAudio](https://github.com/MadArkitekt/EZAudio)  
-* <div><strong>Understanding audio filters via the [Superpowered Audio SDK](http://superpowered.com/)</a> is coming soon as a [techEd](http://edsaltertech.com) blog post</strong></div></style>
+* <strong>Measuring incoming audio levels using AVAudioSession while simultaneously drawing a waveform of said audio using [EZAudio](https://github.com/MadArkitekt/EZAudio)</strong>
 
+  * *A tutorial explaining the previous two points will be available at [techEd](http://edsaltertech.com)*
+
+* Understanding audio filters via the [Superpowered Audio SDK](http://superpowered.com/)</a> is coming soon as a [techEd](http://edsaltertech.com) blog post
+</div>
 <style="font-family:Exo-Thin"></style>
 <style="font-family:Exo-Thin"></style>
 <style="font-family:Exo-Thin"></style>
