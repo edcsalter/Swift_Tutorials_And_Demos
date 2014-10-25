@@ -16,10 +16,10 @@
 <p style="font-family:Exo-Bold">Username & Password storage and retrieval</p>
 * <div style="font-family:Exo"></div>
 <div style="font-family:Exo-Thin">
-<h2>Coming Oct. 24nd 2014<h2>
+<h2>Coming Oct. 25th 2014 (I Realized I was off by a day)<h2>
 
 * <strong>MapKit and Core Location Examples</strong>
-
+* 
 * <strong>Measuring incoming audio levels using AVAudioSession while simultaneously drawing a waveform of said audio using [EZAudio](https://github.com/MadArkitekt/EZAudio)</strong>
 
   * *A tutorial explaining the previous two points will be available at [techEd](http://edsaltertech.com)*
