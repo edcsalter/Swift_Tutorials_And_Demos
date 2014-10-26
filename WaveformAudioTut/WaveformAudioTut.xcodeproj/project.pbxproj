@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EA124C2D023E94D7DD89CD9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E1E71EC5406C0E854FDB2B /* libPods.a */; };
+		5EB394F319FCA6F300E469E1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB394F219FCA6F300E469E1 /* AVFoundation.framework */; };
+		5EB394F519FCA6F800E469E1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB394F419FCA6F800E469E1 /* AudioToolbox.framework */; };
+		5EB394F719FCA6FE00E469E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB394F619FCA6FE00E469E1 /* Foundation.framework */; };
+		5EB394F919FCA70300E469E1 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB394F819FCA70300E469E1 /* GLKit.framework */; };
 		5EE8EA2C19FCA5E800379022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE8EA2B19FCA5E800379022 /* AppDelegate.swift */; };
 		5EE8EA2E19FCA5E800379022 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE8EA2D19FCA5E800379022 /* ViewController.swift */; };
 		5EE8EA3119FCA5E800379022 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8EA2F19FCA5E800379022 /* Main.storyboard */; };
@@ -26,6 +31,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3042C7D873BF1482B12D9211 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		377B6E2BC62BBBCB8F90D4B7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5EB394F219FCA6F300E469E1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5EB394F419FCA6F800E469E1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5EB394F619FCA6FE00E469E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5EB394F819FCA70300E469E1 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		5EB394FA19FCA74A00E469E1 /* WaveformAudioTut-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WaveformAudioTut-Bridging-Header.h"; sourceTree = "<group>"; };
 		5EE8EA2619FCA5E800379022 /* WaveformAudioTut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaveformAudioTut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE8EA2A19FCA5E800379022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EE8EA2B19FCA5E800379022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +48,7 @@
 		5EE8EA3B19FCA5E800379022 /* WaveformAudioTutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaveformAudioTutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE8EA4019FCA5E800379022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EE8EA4119FCA5E800379022 /* WaveformAudioTutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformAudioTutTests.swift; sourceTree = "<group>"; };
+		77E1E71EC5406C0E854FDB2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +56,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EB394F919FCA70300E469E1 /* GLKit.framework in Frameworks */,
+				5EB394F719FCA6FE00E469E1 /* Foundation.framework in Frameworks */,
+				5EB394F519FCA6F800E469E1 /* AudioToolbox.framework in Frameworks */,
+				5EB394F319FCA6F300E469E1 /* AVFoundation.framework in Frameworks */,
+				3EA124C2D023E94D7DD89CD9 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +74,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22EABB50E49458DAAEFC50C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EB394F819FCA70300E469E1 /* GLKit.framework */,
+				5EB394F619FCA6FE00E469E1 /* Foundation.framework */,
+				5EB394F419FCA6F800E469E1 /* AudioToolbox.framework */,
+				5EB394F219FCA6F300E469E1 /* AVFoundation.framework */,
+				77E1E71EC5406C0E854FDB2B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5EE8EA1D19FCA5E800379022 = {
 			isa = PBXGroup;
 			children = (
 				5EE8EA2819FCA5E800379022 /* WaveformAudioTut */,
 				5EE8EA3E19FCA5E800379022 /* WaveformAudioTutTests */,
 				5EE8EA2719FCA5E800379022 /* Products */,
+				F6067D2AECA4FFB8A804C366 /* Pods */,
+				22EABB50E49458DAAEFC50C6 /* Frameworks */,
+				5EB394FA19FCA74A00E469E1 /* WaveformAudioTut-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +145,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F6067D2AECA4FFB8A804C366 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				377B6E2BC62BBBCB8F90D4B7 /* Pods.debug.xcconfig */,
+				3042C7D873BF1482B12D9211 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EE8EA4519FCA5E800379022 /* Build configuration list for PBXNativeTarget "WaveformAudioTut" */;
 			buildPhases = (
+				0AC43C1C0182FF0F3015020D /* Check Pods Manifest.lock */,
 				5EE8EA2219FCA5E800379022 /* Sources */,
 				5EE8EA2319FCA5E800379022 /* Frameworks */,
 				5EE8EA2419FCA5E800379022 /* Resources */,
+				8A7DC54192F8C593B186795F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +250,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AC43C1C0182FF0F3015020D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8A7DC54192F8C593B186795F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5EE8EA2219FCA5E800379022 /* Sources */ = {
@@ -336,21 +413,28 @@
 		};
 		5EE8EA4619FCA5E800379022 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 377B6E2BC62BBBCB8F90D4B7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WaveformAudioTut/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WaveformAudioTut-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		5EE8EA4719FCA5E800379022 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3042C7D873BF1482B12D9211 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WaveformAudioTut/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WaveformAudioTut-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -407,6 +491,7 @@
 				5EE8EA4719FCA5E800379022 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5EE8EA4819FCA5E800379022 /* Build configuration list for PBXNativeTarget "WaveformAudioTutTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +500,7 @@
 				5EE8EA4A19FCA5E800379022 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
