@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5EE8EA2C19FCA5E800379022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE8EA2B19FCA5E800379022 /* AppDelegate.swift */; };
+		5EE8EA2E19FCA5E800379022 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE8EA2D19FCA5E800379022 /* ViewController.swift */; };
+		5EE8EA3119FCA5E800379022 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8EA2F19FCA5E800379022 /* Main.storyboard */; };
+		5EE8EA3319FCA5E800379022 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8EA3219FCA5E800379022 /* Images.xcassets */; };
+		5EE8EA3619FCA5E800379022 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8EA3419FCA5E800379022 /* LaunchScreen.xib */; };
+		5EE8EA4219FCA5E800379022 /* WaveformAudioTutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE8EA4119FCA5E800379022 /* WaveformAudioTutTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5EE8EA3C19FCA5E800379022 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EE8EA1E19FCA5E800379022 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EE8EA2519FCA5E800379022;
+			remoteInfo = WaveformAudioTut;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5EE8EA2619FCA5E800379022 /* WaveformAudioTut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaveformAudioTut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EE8EA2A19FCA5E800379022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EE8EA2B19FCA5E800379022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5EE8EA2D19FCA5E800379022 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5EE8EA3019FCA5E800379022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5EE8EA3219FCA5E800379022 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5EE8EA3519FCA5E800379022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5EE8EA3B19FCA5E800379022 /* WaveformAudioTutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaveformAudioTutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EE8EA4019FCA5E800379022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EE8EA4119FCA5E800379022 /* WaveformAudioTutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformAudioTutTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5EE8EA2319FCA5E800379022 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EE8EA3819FCA5E800379022 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5EE8EA1D19FCA5E800379022 = {
+			isa = PBXGroup;
+			children = (
+				5EE8EA2819FCA5E800379022 /* WaveformAudioTut */,
+				5EE8EA3E19FCA5E800379022 /* WaveformAudioTutTests */,
+				5EE8EA2719FCA5E800379022 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5EE8EA2719FCA5E800379022 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EE8EA2619FCA5E800379022 /* WaveformAudioTut.app */,
+				5EE8EA3B19FCA5E800379022 /* WaveformAudioTutTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EE8EA2819FCA5E800379022 /* WaveformAudioTut */ = {
+			isa = PBXGroup;
+			children = (
+				5EE8EA2B19FCA5E800379022 /* AppDelegate.swift */,
+				5EE8EA2D19FCA5E800379022 /* ViewController.swift */,
+				5EE8EA2F19FCA5E800379022 /* Main.storyboard */,
+				5EE8EA3219FCA5E800379022 /* Images.xcassets */,
+				5EE8EA3419FCA5E800379022 /* LaunchScreen.xib */,
+				5EE8EA2919FCA5E800379022 /* Supporting Files */,
+			);
+			path = WaveformAudioTut;
+			sourceTree = "<group>";
+		};
+		5EE8EA2919FCA5E800379022 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5EE8EA2A19FCA5E800379022 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5EE8EA3E19FCA5E800379022 /* WaveformAudioTutTests */ = {
+			isa = PBXGroup;
+			children = (
+				5EE8EA4119FCA5E800379022 /* WaveformAudioTutTests.swift */,
+				5EE8EA3F19FCA5E800379022 /* Supporting Files */,
+			);
+			path = WaveformAudioTutTests;
+			sourceTree = "<group>";
+		};
+		5EE8EA3F19FCA5E800379022 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5EE8EA4019FCA5E800379022 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EE8EA2519FCA5E800379022 /* WaveformAudioTut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EE8EA4519FCA5E800379022 /* Build configuration list for PBXNativeTarget "WaveformAudioTut" */;
+			buildPhases = (
+				5EE8EA2219FCA5E800379022 /* Sources */,
+				5EE8EA2319FCA5E800379022 /* Frameworks */,
+				5EE8EA2419FCA5E800379022 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WaveformAudioTut;
+			productName = WaveformAudioTut;
+			productReference = 5EE8EA2619FCA5E800379022 /* WaveformAudioTut.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5EE8EA3A19FCA5E800379022 /* WaveformAudioTutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EE8EA4819FCA5E800379022 /* Build configuration list for PBXNativeTarget "WaveformAudioTutTests" */;
+			buildPhases = (
+				5EE8EA3719FCA5E800379022 /* Sources */,
+				5EE8EA3819FCA5E800379022 /* Frameworks */,
+				5EE8EA3919FCA5E800379022 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EE8EA3D19FCA5E800379022 /* PBXTargetDependency */,
+			);
+			name = WaveformAudioTutTests;
+			productName = WaveformAudioTutTests;
+			productReference = 5EE8EA3B19FCA5E800379022 /* WaveformAudioTutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EE8EA1E19FCA5E800379022 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Ed Salter";
+				TargetAttributes = {
+					5EE8EA2519FCA5E800379022 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					5EE8EA3A19FCA5E800379022 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 5EE8EA2519FCA5E800379022;
+					};
+				};
+			};
+			buildConfigurationList = 5EE8EA2119FCA5E800379022 /* Build configuration list for PBXProject "WaveformAudioTut" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5EE8EA1D19FCA5E800379022;
+			productRefGroup = 5EE8EA2719FCA5E800379022 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EE8EA2519FCA5E800379022 /* WaveformAudioTut */,
+				5EE8EA3A19FCA5E800379022 /* WaveformAudioTutTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5EE8EA2419FCA5E800379022 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EE8EA3119FCA5E800379022 /* Main.storyboard in Resources */,
+				5EE8EA3619FCA5E800379022 /* LaunchScreen.xib in Resources */,
+				5EE8EA3319FCA5E800379022 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EE8EA3919FCA5E800379022 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EE8EA2219FCA5E800379022 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EE8EA2E19FCA5E800379022 /* ViewController.swift in Sources */,
+				5EE8EA2C19FCA5E800379022 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EE8EA3719FCA5E800379022 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EE8EA4219FCA5E800379022 /* WaveformAudioTutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5EE8EA3D19FCA5E800379022 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EE8EA2519FCA5E800379022 /* WaveformAudioTut */;
+			targetProxy = 5EE8EA3C19FCA5E800379022 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5EE8EA2F19FCA5E800379022 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EE8EA3019FCA5E800379022 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5EE8EA3419FCA5E800379022 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EE8EA3519FCA5E800379022 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5EE8EA4319FCA5E800379022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5EE8EA4419FCA5E800379022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EE8EA4619FCA5E800379022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WaveformAudioTut/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5EE8EA4719FCA5E800379022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WaveformAudioTut/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5EE8EA4919FCA5E800379022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WaveformAudioTutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaveformAudioTut.app/WaveformAudioTut";
+			};
+			name = Debug;
+		};
+		5EE8EA4A19FCA5E800379022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WaveformAudioTutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaveformAudioTut.app/WaveformAudioTut";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EE8EA2119FCA5E800379022 /* Build configuration list for PBXProject "WaveformAudioTut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EE8EA4319FCA5E800379022 /* Debug */,
+				5EE8EA4419FCA5E800379022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EE8EA4519FCA5E800379022 /* Build configuration list for PBXNativeTarget "WaveformAudioTut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EE8EA4619FCA5E800379022 /* Debug */,
+				5EE8EA4719FCA5E800379022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5EE8EA4819FCA5E800379022 /* Build configuration list for PBXNativeTarget "WaveformAudioTutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EE8EA4919FCA5E800379022 /* Debug */,
+				5EE8EA4A19FCA5E800379022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5EE8EA1E19FCA5E800379022 /* Project object */;
+}
