@@ -15,7 +15,8 @@
 <h3 style="font-family:Exo-Thin">CoreDataTest</h3>
 <p style="font-family:Exo-Bold">Username & Password storage and retrieval</p><br>
 <div style="font-family:Exo"></div>
-<hr>
+
+
 <div style="font-family:Exo-Thin">
 <h2>Audio Session / EZAudio / CocoaPods Code is Up - Tutorial in Progress<h2>
 
