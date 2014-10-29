@@ -20,11 +20,9 @@
 <div style="font-family:Exo-Thin">
 <h2>Audio Session / EZAudio / CocoaPods Code is Up - Tutorial in Progress<h2>
 
-* <strong>MapKit and Core Location Examples</strong>
-
 * <strong>Measuring incoming audio levels using AVAudioSession while simultaneously drawing a waveform using [EZAudio](https://github.com/MadArkitekt/EZAudio)</strong>
 
-  * *A tutorial explaining the previous two points will be available at [techEd](http://edsaltertech.com)*
+  * *A tutorial explaining the previous will be available at [techEd](http://edsaltertech.com)*
 
 * Understanding audio filters via the [Superpowered Audio SDK](http://superpowered.com/)</a> is coming soon as a [techEd](http://edsaltertech.com) blog post
 </div>
