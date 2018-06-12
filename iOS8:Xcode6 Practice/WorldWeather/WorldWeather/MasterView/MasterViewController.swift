@@ -29,7 +29,7 @@ class MasterViewController: UITableViewController {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+    if UIDevice.current.userInterfaceIdiom == .pad {
       self.clearsSelectionOnViewWillAppear = false
       self.preferredContentSize = CGSize(width: 320.0, height: 600.0)
     }
@@ -53,7 +53,7 @@ class MasterViewController: UITableViewController {
   
   
   // MARK: - Segues
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "showDetail" {
       if let indexPath = self.tableView.indexPathForSelectedRow() {
         let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController

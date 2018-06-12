@@ -31,7 +31,7 @@ class DetailViewController: UIViewController {
   var cityWeather: CityWeather? {
   didSet {
     // Update the view.
-    if isViewLoaded() {
+    if isViewLoaded {
       configureView()
       provideDataToChildViewControllers()
     }
