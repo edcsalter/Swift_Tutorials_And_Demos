@@ -23,11 +23,11 @@
 import Foundation
 import UIKit
 
-@objc class CityWeather {
+class CityWeather {
   private(set) var name: String
   private(set) var weather: [DailyWeather]
   var cityImage: UIImage {
-    return UIImage(named: name)
+    return UIImage(named: name)!
   }
   
   init(name: String, weather: [DailyWeather]) {

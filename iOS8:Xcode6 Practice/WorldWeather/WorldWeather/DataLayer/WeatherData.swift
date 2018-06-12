@@ -26,7 +26,7 @@ class WeatherData {
   private(set) var cities = [CityWeather]()
   
   init(plistNamed: String) {
-    self.cities = loadWeatherData(plistNamed)
+    self.cities = loadWeatherData(plistNamed: plistNamed)
   }
   
   convenience init() {
@@ -35,9 +35,9 @@ class WeatherData {
   
   // MARK: - Private Methods
   private func loadWeatherData(plistNamed: String) -> [CityWeather] {
-    let plistRoot = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource(plistNamed, ofType: "plist")!)
+    let plistRoot = NSDictionary(contentsOfFile: Bundle.mainBundle.pathForResource(plistNamed, ofType: "plist")!)
     var cityWeather = [CityWeather]()
-    for (name, dailyWeather) in plistRoot as [String : [NSDictionary]] {
+    for (name, dailyWeather) in plistRoot as! [String : [NSDictionary]] {
       cityWeather.append(CityWeather(array: dailyWeather, name: name))
     }
     return cityWeather
@@ -45,7 +45,7 @@ class WeatherData {
 }
 
 extension CityWeather {
-  private convenience init(array: [NSDictionary], name: String) {
+    convenience init(array: [NSDictionary], name: String) {
     var dailyWeather = [DailyWeather]()
     for dict in array {
       dailyWeather.append(DailyWeather(dictionary: dict))
@@ -55,7 +55,7 @@ extension CityWeather {
 }
 
 extension DailyWeather {
-  private convenience init(dictionary: NSDictionary) {
+  convenience init(dictionary: NSDictionary) {
     let status = WeatherStatus(dictionary: dictionary)
     self.init(date: dictionary["date"] as NSDate, status: status)
   }

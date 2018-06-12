@@ -22,14 +22,14 @@
 
 import Foundation
 
-let dayNameDateFormatter = NSDateFormatter()
+let dayNameDateFormatter = DateFormatter()
 
-@objc class DailyWeather {
+class DailyWeather {
   private(set) var date: NSDate
   private(set) var status: WeatherStatus
   var dayName: String {
     dayNameDateFormatter.dateFormat = "E"
-    return dayNameDateFormatter.stringFromDate(date)
+    return dayNameDateFormatter.string(from: date as Date)
   }
   
   init(date: NSDate, status: WeatherStatus) {
