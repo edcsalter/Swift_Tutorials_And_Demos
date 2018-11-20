@@ -218,19 +218,6 @@ extension LinkedList: Collection {
     }
 }
 
-public class Solution {
-    public func isPalindrome(_ x: Int) -> Bool {
-        let stringInt = String(x)
-        
-        if stringInt == String(stringInt.reversed()) {
-            return true
-        }
-        return false
-}
-}
-
-let epic = Solution.init()
-print(epic.isPalindrome(1221))
 // Verifying Collection Adherence
 
 //var list = LinkedList<Int>()
@@ -246,4 +233,3 @@ print(epic.isPalindrome(1221))
 
 //let sum = list.reduce(0, +)
 //print("Sum of all values: \(sum)")
-
