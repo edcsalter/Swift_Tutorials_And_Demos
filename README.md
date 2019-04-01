@@ -1,5 +1,5 @@
 <h1 style="color:orange;text-align:center;font-family:Exo-Thin"><u>Swift iOS Demos</u></h1>
-[endorse](https://api.coderwall.com/madarkitekt/endorsecount.png)](https://coderwall.com/madarkitekt)
+<a href="https://coderwall.com/madarkitekt">Endorse</a>
 <p style="text-align:center;font-family:Exo;">The following apps demo Swift, as well as the expanded capabilities of Xcode 6</p>
  <br>
 
