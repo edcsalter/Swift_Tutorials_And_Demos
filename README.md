@@ -1,6 +1,6 @@
 <h1 style="color:orange;text-align:center;font-family:Exo-Thin"><u>Swift iOS Demos</u></h1>
 <a href="https://coderwall.com/madarkitekt">Endorse</a>
-<p style="text-align:center;font-family:Exo;">The following apps demo Swift, as well as the expanded capabilities of Xcode 6</p>
+<p style="text-align:center;font-family:Exo;">The following apps demo Swift, as well as the expanded capabilities of Xcode 11</p>
 
 <h1 style="text-align:center;font-family:Exo-Thin;"><u>Build Sheet</u></h1>
 <hr>
@@ -20,7 +20,7 @@ AdaptiveWeather’s two views are truly universal, scaling to any device and tra
 
 ### Audio Session / EZAudio / CocoaPods Code is Up - Tutorial in Progress
 
-* <strong>Measuring incoming audio levels using AVAudioSession while simultaneously drawing a waveform using [EZAudio](https://github.com/MadArkitekt/EZAudio)</strong>
+* Measuring incoming audio levels using AVAudioSession while simultaneously drawing a waveform using [EZAudio](https://github.com/MadArkitekt/EZAudio)
 
   * _A tutorial explaining the previous will be available at [techEd](http://edsaltertech.com)_
 
