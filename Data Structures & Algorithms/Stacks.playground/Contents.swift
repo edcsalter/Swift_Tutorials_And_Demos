@@ -10,10 +10,12 @@ public struct Stack<Element> {
     
     public init() {}
     
+    //O(1)
     public mutating func push(_ element: Element) {
         storage.append(element)
     }
     
+    //O(1)
     @discardableResult
     public mutating func pop() -> Element? {
         storage.popLast()
@@ -40,3 +42,18 @@ extension Stack: CustomStringConvertible {
     }
 }
 
+example(of: "Using a Stack") {
+    var stack = Stack<Int>()
+    stack.push(1)
+    stack.push(2)
+    stack.push(3)
+    stack.push(4)
+    stack.push(5)
+    
+    print(stack)
+    
+    if let poppedElement = stack.pop() {
+        assert(5 == poppedElement)
+        print("Popped: \(poppedElement)")
+    }
+}
