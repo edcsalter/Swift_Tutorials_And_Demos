@@ -8,6 +8,10 @@
 public struct Stack<Element> {
     private var storage: [Element] = []
     
+    public init(_ elements:[Element]) {
+        storage = elements
+    }
+    
     public init() {}
     
     //O(1)
@@ -19,6 +23,27 @@ public struct Stack<Element> {
     @discardableResult
     public mutating func pop() -> Element? {
         storage.popLast()
+    }
+    
+    // Return top element without mutating
+    public func peek() -> Element? {
+        storage.last
+    }
+    
+    public func isEmpty() -> Bool {
+        peek() == nil
+    }
+    
+    public func printInReverse<T>(_ array:[T]) {
+        var stack = Stack<T>()
+        
+        for value in array {
+            stack.push(value)
+        }
+        
+        while let value = stack.pop() {
+            print(value)
+        }
     }
 }
 
@@ -42,6 +67,12 @@ extension Stack: CustomStringConvertible {
     }
 }
 
+extension Stack: ExpressibleByArrayLiteral {
+  public init(arrayLiteral elements: Element...) {
+    storage = elements
+  }
+}
+
 example(of: "Using a Stack") {
     var stack = Stack<Int>()
     stack.push(1)
@@ -57,3 +88,55 @@ example(of: "Using a Stack") {
         print("Popped: \(poppedElement)")
     }
 }
+
+example(of: "Initializing stack from array") {
+    let array = ["A", "B", "C", "D"]
+    var stack = Stack(array)
+    print(stack)
+    stack.pop()
+}
+
+example(of: "Initializing stack from array literal") {
+    var stack = Stack(arrayLiteral: [1.0, 2.0, 3.0, 4.0])
+    print(stack)
+    stack.pop()
+}
+
+//
+
+let array: [Int] = [1, 2, 3, 4, 5]
+
+func printInReverse<T>(_ array: [T]) {
+  var stack = Stack<T>()
+
+  for value in array {
+    stack.push(value)
+  }
+
+  while let value = stack.pop() {
+    print(value)
+  }
+}
+
+printInReverse(array)
+
+var testString1 = "h((e))llo(world)()"
+
+func checkParentheses(_ string:String) -> Bool {
+    var stack = Stack<Character>()
+    
+    for character in string {
+        if character == "(" {
+            stack.push(character)
+        } else if character == ")" {
+            if stack.isEmpty() {
+                return false
+            } else {
+                stack.pop()
+            }
+        }
+    }
+    return stack.isEmpty()
+}
+
+print(checkParentheses(testString1))
