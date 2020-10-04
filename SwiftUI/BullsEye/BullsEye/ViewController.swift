@@ -27,6 +27,7 @@
 /// THE SOFTWARE.
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
   @IBOutlet weak var slider: UISlider!
@@ -57,6 +58,10 @@ class ViewController: UIViewController {
   
   @IBAction func sliderMoved(_ slider: UISlider) {
     currentValue = lroundf(slider.value)
+  }
+  
+  @IBSegueAction func openRGBullsEye(_ coder: NSCoder) -> UIViewController? {
+    UIHostingController(coder: coder, rootView: ContentView(rGuess: 0.5, gGuess: 0.5, bGuess: 0.5))
   }
   
 }

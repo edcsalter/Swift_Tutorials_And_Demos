@@ -62,7 +62,7 @@
                                 <rect key="frame" x="350.66666666666669" y="324" width="111" height="30"/>
                                 <state key="normal" title="Play RGBullsEye"/>
                                 <connections>
-                                    <segue destination="NUH-zM-tYG" kind="show" id="rmc-nT-aGE"/>
+                                    <segue destination="NUH-zM-tYG" kind="show" destinationCreationSelector="openRGBullsEye:" id="rmc-nT-aGE"/>
                                 </connections>
                             </button>
                         </subviews>
