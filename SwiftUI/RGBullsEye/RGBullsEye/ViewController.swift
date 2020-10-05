@@ -31,22 +31,63 @@
 /// THE SOFTWARE.
 
 import UIKit
+import SwiftUI
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class ViewController: UIViewController {
+  @IBOutlet weak var slider: UISlider!
+  @IBOutlet weak var targetLabel: UILabel!
   
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
-    return true
+  var currentValue = 50
+  var targetValue = 50
+  
+  override func viewWillAppear(_ animated: Bool) {
+    slider.value = 50
+    targetValue = Int.random(in: 1...100)
+    targetLabel.text = String(targetValue)
+    parent?.navigationItem.title = "BullsEye"
   }
   
-  // MARK: UISceneSession Lifecycle
-  
-  func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-    // Called when a new scene session is being created.
-    // Use this method to select a configuration to create the new scene with.
-    return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+  @IBAction func showAlert() {
+    let difference = abs(targetValue - currentValue)
+    let points = 100 - difference
+    
+    let alert = UIAlertController(title: "Your Score",
+      message: String(points), preferredStyle: .alert)
+    
+    let action = UIAlertAction(title: "OK",
+      style: .default, handler: nil)
+    
+    alert.addAction(action)
+    
+    present(alert, animated: true, completion: nil)
   }
   
+  @IBAction func sliderMoved(_ slider: UISlider) {
+    currentValue = lroundf(slider.value)
+  }
+}
+
+struct ViewControllerRepresentation: UIViewControllerRepresentable {
+
+  func makeUIViewController(
+    context: UIViewControllerRepresentableContext
+    <ViewControllerRepresentation>) -> ViewController {
+    UIStoryboard(name: "Main", bundle: nil)
+      .instantiateViewController(
+        withIdentifier: "ViewController") as! ViewController
+  }
+
+  func updateUIViewController(
+    _ uiViewController: ViewController,
+    context: UIViewControllerRepresentableContext
+    <ViewControllerRepresentation>) {
+
+  }
+}
+
+struct ViewControllerPreviews: PreviewProvider {
+  static var previews: some View {
+    ViewControllerRepresentation()
+  }
 }
 

@@ -30,23 +30,46 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import UIKit
+import SwiftUI
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-  
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
-    return true
+struct ColorUISlider: UIViewRepresentable {
+  var color: UIColor
+  @Binding var value: Double
+
+  class Coordinator: NSObject {
+    var parent: ColorUISlider
+    init(_ parent: ColorUISlider) {
+      self.parent = parent
+    }
+
+    @objc func updateColorUISlider(_ sender: UISlider) {
+      parent.value = Double(sender.value)
+    }
   }
-  
-  // MARK: UISceneSession Lifecycle
-  
-  func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-    // Called when a new scene session is being created.
-    // Use this method to select a configuration to create the new scene with.
-    return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+
+  func makeCoordinator() -> ColorUISlider.Coordinator {
+    Coordinator(self)
   }
-  
+
+  func makeUIView(context: Context) -> UISlider {
+    let slider = UISlider(frame: .zero)
+    slider.thumbTintColor = color
+    slider.value = Float(value)
+    slider.addTarget(context.coordinator,
+      action: #selector(Coordinator.updateColorUISlider(_:)),
+      for: .valueChanged)
+    return slider
+  }
+
+  func updateUIView(_ uiView: UISlider, context: Context) {
+    uiView.value = Float(self.value)
+  }
+
 }
 
+struct ColorUISlider_Previews: PreviewProvider {
+  static var previews: some View {
+    ColorUISlider(color: .red, value: .constant(0.5))
+      .previewLayout(.sizeThatFits)
+  }
+}
