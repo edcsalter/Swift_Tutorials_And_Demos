@@ -10,8 +10,7 @@
 * SwiftUI demo app
 * Original app's capabilities then expanded upon
 * Uses UIKit w/SwiftUI 
-### RGBullsEye
-* Uses 
+### Notes
 * Declarative app development
     * declare how views should look and what data they depend on
     * declare how view's state affects its appearance & how SwiftUI should react to change in data dependencies 
