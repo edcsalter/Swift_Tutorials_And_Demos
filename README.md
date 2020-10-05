@@ -6,10 +6,21 @@
 ## Build Sheets
 ### BullsEye
 * Uses SwiftUI w/UIKit
+
+### MacBullsEye
+* SwiftUI on macOS and iPadOS
+
+### Packages
+* Swift Packages of the game thus far
+
 ### RGBullsEye
 * SwiftUI demo app
 * Original app's capabilities then expanded upon
 * Uses UIKit w/SwiftUI 
+
+### TVBullsEye
+* SwiftUI on AppleTV
+
 ### Notes
 * Declarative app development
     * declare how views should look and what data they depend on
