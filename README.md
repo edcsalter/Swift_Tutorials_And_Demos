@@ -2,7 +2,16 @@
 <a href="https://coderwall.com/madarkitekt">Endorse</a>
 <p style="text-align:center;font-family:Exo;">The following apps demo Swift, as well as the expanded capabilities of Xcode 11</p>
 
-# SwiftUI Notes
+# SwiftUI
+## Build Sheets
+### BullsEye
+* Uses SwiftUI w/UIKit
+### RGBullsEye
+* SwiftUI demo app
+* Original app's capabilities then expanded upon
+* Uses UIKit w/SwiftUI 
+### RGBullsEye
+* Uses 
 * Declarative app development
     * declare how views should look and what data they depend on
     * declare how view's state affects its appearance & how SwiftUI should react to change in data dependencies 
