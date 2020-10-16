@@ -66,6 +66,13 @@ AdaptiveWeather’s two views are truly universal, scaling to any device and tra
 * Measuring incoming audio levels using AVAudioSession while simultaneously drawing a waveform using [EZAudio](https://github.com/MadArkitekt/EZAudio)
 
   * _A tutorial explaining the previous will be available at [techEd](http://edsaltertech.com)_
-
-* Understanding audio filters via the [Superpowered Audio SDK](http://superpowered.com/)</a> is coming soon as a [techEd](http://edsaltertech.com) blog post
 </div>
+
+# Data Structures & Algorithms
+## Data Structures:
+### Stack
+* **LIFO** 
+* Essential operations
+    - **push**
+    - **pop**
+    
