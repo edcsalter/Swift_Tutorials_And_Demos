@@ -1,6 +1,7 @@
 <h1 style="color:orange;text-align:center;font-family:Exo-Thin"><u>Swift iOS Demos</u></h1>
 <a href="https://coderwall.com/madarkitekt">Endorse</a>
-<p style="text-align:center;font-family:Exo;">The following apps demo Swift, as well as the expanded capabilities of Xcode 11</p>
+
+The following apps demo Swift, as well as the expanded capabilities of Xcode 11
 
 # SwiftUI
 ## Build Sheets
@@ -45,10 +46,8 @@
     * Subviews keep selves updated means no need for view controller
     * Live preview means not as much a need for simulator
 
-<h1 style="text-align:center;font-family:Exo-Thin;"><u>Build Sheet</u></h1>
-<hr>
 <h3 style="font-family:Exo-Thin">AdaptiveWeather</h3>
-AdaptiveWeather’s two views are truly universal, scaling to any device and transitioning from a vertical stack, to horizontal row depending on orientation. No code alteration necessary, results were achieved purely through Storyboard.
+AdaptiveWeather’s two views are truly universal, scaling to any device and transitioning from a vertical stack, to horizontal row depending on orientation. No code alteration necessary, results were achieved purely  through Storyboard.
 
 * Adaptive Layout
 
@@ -56,10 +55,10 @@ AdaptiveWeather’s two views are truly universal, scaling to any device and tra
 
 * Device-Dependent Images (Including Retina HD images for iPhone 6 Plus)
 
-<hr>
-<h3 style="font-family:Exo-Thin">CoreDataTest</h3>
-<p style="font-family:Exo-Bold">Username & Password storage and retrieval</p>
-<hr>
+ 
+### CoreDataTest
+* Username & Password storage and retrieval
+
 
 ### Audio Session / EZAudio / CocoaPods Code is Up - Tutorial in Progress
 
@@ -68,11 +67,25 @@ AdaptiveWeather’s two views are truly universal, scaling to any device and tra
   * _A tutorial explaining the previous will be available at [techEd](http://edsaltertech.com)_
 </div>
 
-# Data Structures & Algorithms
-## Data Structures:
+## Data Structures & Algorithms
+### Data Structures:
 ### Stack
 * **LIFO** 
 * Essential operations
     - **push**
     - **pop**
-    
+
+### Linked List
+* Linear & unidirectional
+* O(1) time complexity for head-first insertion (Arrays have O(n) time complexity for head-first insertions)
+* Conforming to collection protocols, Sequence and Collection, affords host of methods for fairly small set of requirements
+* **Copy-on-write** (value semantics)
+
+### Queues
+* **FIFO**
+* **Enqueue** inserts at end of queue
+* **Dequeue** removes from front of queue
+* Elements *not* stored in contiguous memory blocks like Array. This scattered storage has potential for cache misses.
+* **Ring-buffer-queue** good for queues of fixed size
+* Leveraging two stacks improves ```dequeue(_:)``` time complexity to amortized O(1)
+* Double-stack beats out Linked List in spacial locality
